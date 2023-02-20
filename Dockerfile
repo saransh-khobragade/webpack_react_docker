@@ -1,5 +1,5 @@
 FROM node:alpine as build
-ENV PORT=80
+ENV PORT=8080
 WORKDIR /app
 COPY package.json ./
 COPY package-lock.json ./
@@ -10,6 +10,6 @@ RUN npm run build
 FROM nginx:stable-alpine
 COPY --from=build /app/public /usr/share/nginx/html
 # new
-COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx/templates /etc/nginx/templates
 EXPOSE $PORT
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
