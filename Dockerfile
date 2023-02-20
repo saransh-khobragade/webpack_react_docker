@@ -11,4 +11,4 @@ COPY --from=build /app/public /usr/share/nginx/html
 # new
 COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 8080
-CMD ["nginx", "-g", "daemon on;"]
+ENTRYPOINT ["nginx", "-g", "daemon on;"]
