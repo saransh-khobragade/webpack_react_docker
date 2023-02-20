@@ -1,4 +1,6 @@
 FROM node:alpine as build
+ENV PORT=80
+ENV HOST='0.0.0.0:80'
 WORKDIR /app
 COPY package.json ./
 COPY package-lock.json ./
