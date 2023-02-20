@@ -3,7 +3,7 @@
       * [Node Download Page](https://nodejs.org/en/download/)
    * Run this in terminal
       * ```export NODE_OPTIONS=--openssl-legacy-provider```
-      * ```npm i```
+      * ```npm i``` Install dependencies
 
 ## Start App
    * Run this in local to start local app and open http://localhost:3000/ in browsser
