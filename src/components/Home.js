@@ -4,7 +4,7 @@ export default function Home() {
 
   return (
     <div>
-      Hello React App
+      Hello React App1
     </div>
   );
 }
